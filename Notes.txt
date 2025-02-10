@@ -1,0 +1,74 @@
+Work flow
+git pull, tell it where git repository is (ours is origin, github url)
+    till it what branch to pull (for now main)
+when you add a new feature, "trunk phase" work flow (trunk is main)
+    we dont just develop off of trunk  
+    when we make changes we make 
+
+!! need to organize my devlopment so I commit after each main change and not 
+    doing a bunch of stuff
+
+whenever we're gong to do work on our code we're gonna branch out, work on it, test it
+    merge it into main then deploy to cloud front
+
+main is the latest working release always. 
+
+
+vocab:
+git status
+git branch [branch name]
+git checkout
+git checkout [branch name]
+git pull origin main
+npm run build
+npm run dev
+
+commit, stage, conflict, merge,
+
+
+start on branch main
+create a branch(not on it yet): git branch [branch main]
+move to branch you maid: git checkout [branch main]
+tell you you're on new branch, none to commit: git status
+    returns -> nothing to commit
+
+
+
+good design principles: Grid for pages, consitancy to make it intuitive
+
+a component, main layout, funcitons
+two ways to create component in jsx:
+    do a function, returns jsx code (EASIER)
+    create a class and extend reacts component class, create render which returns jsx
+
+how to use componenets in other components:
+    point of react is to put components in other components
+
+main layout takes two properties
+
+
+when done working for the day:
+    git status -> shows untracked folders
+    git add .\src\layouts\
+    git add .\src\pages\
+    git status
+    !changes to be commited: [list of files]
+
+    git commit -m "message"
+
+    after commit, push, dont want to push to main branch?
+    push to branch
+
+    git push origin [branch name]
+
+
+
+    children and title in MainLayout.jsx are expecting to be
+    passed. they are the porperties and can pass them in differnt ways.
+
+    use effect, is a hook. pass use effect function and array? 
+
+    components in the end are just xml
+
+
+    can add bootstrap in a lot of different ways.

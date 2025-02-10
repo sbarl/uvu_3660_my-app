@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-//import './App.css';
+import About from "./pages/About"
 
 import {
   BrowserRouter,
@@ -12,17 +12,18 @@ import {
 } from "react-router-dom"
 
 
+
 function App() {
   return (
-    <>
+    <div>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
-  );
+    </div>
+  )
 }
 
 function NavBar() {
@@ -46,7 +47,7 @@ const Home = () => (
     <p>Welcome to the home page. This will be my website for Web II!</p>
   </div>
 );
-
+/*
 const About = () => (
   <div>
     <h1>About</h1>
@@ -55,7 +56,7 @@ const About = () => (
       to display options like gyms, tracks and even hiking trails. I have a lot of ideas.  </p>
   </div>
 );
-
+*/
 const NotFound = () => (
   <div>
     <h1>404 - Page Not Found</h1>
@@ -64,41 +65,4 @@ const NotFound = () => (
 );
 
 export default App
-
-/*
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App
-
-serve -s ./dist
-*/
-
-
 
