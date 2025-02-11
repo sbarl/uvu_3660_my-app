@@ -5,6 +5,8 @@ import BootStrap from './pages/BootStrap';
 import NotFound from './pages/NotFound';
 import Signin from './pages/Signin';
 import Signup from './pages/Signup';
+import LogWork from './pages/LogWork';
+import MyAccount from './pages/MyAccount';
 
 function App() {
   return (
@@ -15,7 +17,10 @@ function App() {
         <Route path="/bootstrap" element={<BootStrap />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/logwork" element={<LogWork />} />
+        <Route path="/myaccount" element={<MyAccount />} />
         <Route path="*" element={<NotFound />} />
+
       </Routes>
     </div>
   )

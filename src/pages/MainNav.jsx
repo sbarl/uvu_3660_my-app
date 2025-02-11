@@ -7,7 +7,7 @@ const MainNav = () => {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">
-                    <span className="ms-2">Demo React App</span>
+                    <span className="ms-2">Chew Chew Train</span>
                 </Link>
                 <button
                     className="navbar-toggler"
@@ -32,25 +32,37 @@ const MainNav = () => {
                                 About
                             </Link>
                         </li>
+                        {/*}
                         <li className="nav-item">
                             <Link className="nav-link" to="/bootstrap">
                                 Bootstrap Demo
                             </Link>
                         </li>
-                        <li className="nav-item">
+    */}
+                        {/*<li className="nav-item">
                             <Link className="nav-link" to="/contact">
                                 Contact
-                            </Link>
-                        </li>
+    </Link>
+                    </li>*/}
                         <li className="nav-item">
                             <Link className="nav-link" to="/signin">
                                 Sign In
                             </Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/logwork">
+                                Log workout
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/myaccount">
+                                My Account
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav >
     );
 };
 

@@ -2,19 +2,58 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-
+  background-color: #FFD1DC;
+  /* Light pastel pink */
+  color: #333;
+  /* Darker text for contrast */
 }
-
 
 html,
 body {
-  margin: 0;
-  padding: 0;
   width: 100%;
-  background-color: black;
-  color: white;
-
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222;
+  /* Ensure headings are readable */
+}
+
+p {
+  color: #444;
+  /* Slightly lighter for body text */
+}
+
+a {
+  color: #D81B60;
+  /* A deeper pink for links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #B0003A;
+  text-decoration: underline;
+}
+
+button {
+  background-color: #FF85A2;
+  /* Softer pink for buttons */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #FF628B;
+  /* Slightly darker on hover */
+}
+
 
 /*:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
