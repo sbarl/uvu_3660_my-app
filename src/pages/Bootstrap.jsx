@@ -1,15 +1,14 @@
 import React from "react";
-import MainLayout from "../layouts/MainLayout";
+import MainLayout from "./layouts/MainLayout";
 
-const About = () => {
+const BootStrap = () => {
     return (
-        <MainLayout title="About us | MyPage">
-            <div className="container">
-                <div className="row">
-
-                </div>
-            </div>
+        <MainLayout title="BootStrap | MyPage">
+            <h2>Bootstrap Grid System</h2>
+            <p>Bootstrap grid system is responsive and mobile-first. It is used to create a responsive layout.</p>
+            <p>The Bootstrap grid system has four classes:</p>
         </MainLayout>
-
     )
-}
+};
+
+export default BootStrap;

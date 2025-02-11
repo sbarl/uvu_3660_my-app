@@ -1,33 +1,57 @@
 import React from "react";
 import { Link } from "react-router-dom"
 
-//const WORDPRESS_IMAGES
 
 const MainNav = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <div className="container-fuild">
+            <div className="container-fluid">
                 <Link className="navbar-brand" to="/">
-
-                </Link>{/* 
+                    <span className="ms-2">Demo React App</span>
+                </Link>
                 <button
-                    className="navbar-toggle"
+                    className="navbar-toggler"
                     type="button"
-                    data-bs-toggle="collagpse"
+                    data-bs-toggle="collapse"
                     data-bs-target="#navbarNav"
                     aria-controls="navbarNav"
-                    aria-expands="false"
-                    aria-label="toggle navigation">
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
                     <span className="navbar-toggler-icon"></span>
-                </button>*/}
-                {/*<h1>My Website</h1>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-    </ul>*/}
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/">
+                                Home
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/about">
+                                About
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/bootstrap">
+                                Bootstrap Demo
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/contact">
+                                Contact
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/signin">
+                                Sign In
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </nav >
-    )
-}
+        </nav>
+    );
+};
 
 export default MainNav;

@@ -1,31 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import About from "./pages/About"
-
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-  Link
-} from "react-router-dom"
-
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ReactHome from './pages/ReactHome';
+import About from './pages/About';
+import BootStrap from './pages/BootStrap';
+import NotFound from './pages/NotFound';
+import Signin from './pages/Signin';
+import Signup from './pages/Signup';
 
 function App() {
   return (
     <div>
-      <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<ReactHome />} />
         <Route path="/about" element={<About />} />
+        <Route path="/bootstrap" element={<BootStrap />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   )
 }
 
+export default App
+{/*
 function NavBar() {
   return (
     <nav>
@@ -34,7 +31,7 @@ function NavBar() {
           <Link to="/">Home </Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about">Aboutt app.jsx</Link>
         </li>
       </ul>
     </nav>
@@ -56,13 +53,11 @@ const About = () => (
       to display options like gyms, tracks and even hiking trails. I have a lot of ideas.  </p>
   </div>
 );
-*/
-const NotFound = () => (
-  <div>
-    <h1>404 - Page Not Found</h1>
-    <p>page not found</p>
-  </div>
-);
 
-export default App
-
+  const NotFound = () => (
+    <div>
+      <h1>404 - Page Not Found</h1>
+      <p>page not found</p>
+    </div>
+  );
+*/}
