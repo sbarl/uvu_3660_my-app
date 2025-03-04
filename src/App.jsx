@@ -7,22 +7,25 @@ import Signin from './pages/Signin';
 import Signup from './pages/Signup';
 import LogWork from './pages/LogWork';
 import MyAccount from './pages/MyAccount';
+import { AuthProvider } from './pages/AuthContext';
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<ReactHome />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/bootstrap" element={<BootStrap />} />
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/logwork" element={<LogWork />} />
-        <Route path="/myaccount" element={<MyAccount />} />
-        <Route path="*" element={<NotFound />} />
+    <AuthProvider>
+      <div>
+        <Routes>
+          <Route path="/" element={<ReactHome />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/bootstrap" element={<BootStrap />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/logwork" element={<LogWork />} />
+          <Route path="/myaccount" element={<MyAccount />} />
+          <Route path="*" element={<NotFound />} />
 
-      </Routes>
-    </div>
+        </Routes>
+      </div>
+    </AuthProvider>
   )
 }
 
