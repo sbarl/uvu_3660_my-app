@@ -1,6 +1,6 @@
 // About.jsx
 import React from "react";
-import MainLayout from "./layouts/MainLayout"; // Adjust the import path as needed
+import MainLayout from "./layouts/MainLayout";
 
 const About = () => {
     return (

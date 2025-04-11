@@ -13,7 +13,6 @@ const LogWork = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Do something with the form data, e.g., send it to a server
         console.log({
             workoutType,
             activityType,
@@ -59,7 +58,7 @@ const LogWork = () => {
                                     <option value="running">Running</option>
                                     <option value="cycling">Cycling</option>
                                     <option value="walking">Walking</option>
-                                    {/* Add more options for activities */}
+                                    {/* Add more options for activities or maybe a type option*/}
                                 </select>
                             </div>
 

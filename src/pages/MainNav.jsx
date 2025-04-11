@@ -32,18 +32,6 @@ const MainNav = () => {
                                 About
                             </Link>
                         </li>
-                        {/*}
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/bootstrap">
-                                Bootstrap Demo
-                            </Link>
-                        </li>
-    */}
-                        {/*<li className="nav-item">
-                            <Link className="nav-link" to="/contact">
-                                Contact
-    </Link>
-                    </li>*/}
                         <li className="nav-item">
                             <Link className="nav-link" to="/signin">
                                 Sign In
@@ -56,9 +44,15 @@ const MainNav = () => {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/myaccount">
-                                My Account
+                                My Accountt
                             </Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/exercises">
+                                Exercise (bootstrap)
+                            </Link>
+                        </li>
+
                     </ul>
                 </div>
             </div>

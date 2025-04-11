@@ -1,13 +1,13 @@
-import { useContext, React } from "react";
+import React, { useContext } from "react";
 import { Navigate, Outlet } from "react-router-dom";
-import { AuthContext } from "./context/AuthContext";
-
+import { AuthContext } from "../pages/AuthContext";
 
 const AuthRoute = () => {
-    const { isLoggedIn } = useContext(AuthContext)
-    return isLoggedIn ? <Outlet /> : <Navigate to="/Login" />
+    const { isLoggedIn } = useContext(AuthContext);
 
-}
+    console.log("AuthRoute: isLoggedIn =", isLoggedIn);
+
+    return isLoggedIn ? <Outlet /> : <Navigate to="/signin" />;
+};
 
 export default AuthRoute;
-//from lexture on feb 18th 39:51

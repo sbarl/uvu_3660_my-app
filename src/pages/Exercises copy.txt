@@ -1,0 +1,93 @@
+import React, { useState, useEffect } from "react";
+import MainLayout from "./layouts/MainLayout";
+
+const Exercises = () => {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+
+    // State for dropdown options
+    const [equipmentList, setEquipmentList] = useState([]);
+    const [bodyPartList, setBodyPartList] = useState([]);
+    const [targetList, setTargetList] = useState([]);
+
+    // State for selected filters
+    const [selectedEquipment, setSelectedEquipment] = useState("");
+    const [selectedBodyPart, setSelectedBodyPart] = useState("");
+
+
+
+    useEffect(() => {
+        const fetchData = async () => {
+            console.log("Fetching data..."); // Debug log
+            const url = 'https://exercisedb.p.rapidapi.com/exercises/equipment/assisted?limit=10&offset=0';
+            const options = {
+                method: 'GET',
+                headers: {
+                    'x-rapidapi-key': '610181d834msh9970082d106b44ap15ed9fjsn237b3dc15925',
+                    'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
+                }
+            };
+
+            try {
+                const response = await fetch(url, options);
+                console.log("Response received:", response); // Debug log
+                const result = await response.json(); // Parse the response as JSON
+                console.log("Result:", result); // Debug log
+                setData(result);
+                console.log("Data after setData", data); //DATA IS EMPTY, i think i dont need this
+                console.log("result after setData", result); // this holds an array
+                setLoading(false);
+
+            } catch (error) {
+                console.error("Error fetching data:", error); // Debug log
+                setError(error);
+                setLoading(false);
+            }
+
+        };
+
+        fetchData();
+    }, []);
+
+
+
+    if (loading) {
+        console.log("Loading..."); // Debug log
+        return (
+            <MainLayout title="Exercises | MyPage">
+                <div>Loading...</div>
+            </MainLayout>
+        );
+    }
+
+    if (error) {
+        console.log("rror:", error); // Debug log
+        return (
+            <MainLayout title="Exercises | MyPage">
+                <div>Error: {error.message}</div>
+            </MainLayout>
+        );
+    }
+    //console.log("Data type of 'result':", typeof result);
+    //console.log("Is 'result' an array?", Array.isArray(result));
+    console.log("Data loaded:", data);
+    return (
+        <MainLayout title="Exercises | MyPage">
+            <h2>Assisted Equipment Exercises</h2>
+            <div className="exercise-list">
+                {data.map((exercise, index) => (
+                    <div key={index}>
+                        <h3>{exercise.name}</h3>
+                        <p>Body Part: {exercise.bodyPart}</p>
+                        <p>Equipment: {exercise.equipment}</p>
+                        <img src={exercise.gifUrl} alt={exercise.name} />
+                    </div>
+                ))}
+            </div>
+        </MainLayout >
+    );
+};
+
+export default Exercises;

@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import MainLayout from "./layouts/MainLayout";
+import { AuthContext } from "./AuthContext";
+
 
 function MyAccount() {
+    const { logout } = useContext(AuthContext);
+
     const [user, setUser] = useState({
         name: "John Doe",
         email: "johndoe@example.com",
@@ -11,8 +15,7 @@ function MyAccount() {
     });
 
     const handleLogout = () => {
-        alert("Logging out...");
-        // Add actual logout logic here
+        logout();
     };
 
     return (

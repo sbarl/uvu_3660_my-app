@@ -72,3 +72,7 @@ when done working for the day:
 
 
     can add bootstrap in a lot of different ways.
+
+
+
+    app.js, exerciseApi.js, App.jsx, exerciseApi.js, Exercises.jsx
