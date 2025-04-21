@@ -76,3 +76,15 @@ when done working for the day:
 
 
     app.js, exerciseApi.js, App.jsx, exerciseApi.js, Exercises.jsx
+
+
+
+
+
+
+    need to:
+    move my api to the backend
+    update json
+    figure out how and what to upload to amazon for tuesday project
+    how do I know what instructions to give to ty???
+    

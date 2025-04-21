@@ -9,10 +9,14 @@ const SignIn = () => {
     const { login } = useContext(AuthContext);
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        login(email, password);
-        navigate("/myaccount");//not sure if this is correct
+        try {
+            await login(email, password, navigate); // Pass navigate to login
+        } catch (error) {
+            console.error("Login failed:", error.message);
+            alert(error.message); // Show error to the user
+        }
     };
 
     return (
@@ -53,6 +57,7 @@ const SignIn = () => {
         </MainLayout>
     );
 };
+
 
 export default SignIn;
 
