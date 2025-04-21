@@ -44,12 +44,12 @@ const MainNav = () => {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/myaccount">
-                                My Accountt
+                                My Account
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/exercises">
-                                Exercise (bootstrap)
+                                Exercise
                             </Link>
                         </li>
 

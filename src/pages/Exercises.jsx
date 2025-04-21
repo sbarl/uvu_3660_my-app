@@ -22,7 +22,7 @@ const Exercises = () => {
             const options = {
                 method: 'GET',
                 headers: {
-                    'x-rapidapi-key': '0002ca57b1msh457ba5fb9a79692p1e9e98jsn814171ad4981',
+                    'x-rapidapi-key': '610181d834msh9970082d106b44ap15ed9fjsn237b3dc15925',
                     'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
                 }
             };
@@ -57,7 +57,7 @@ const Exercises = () => {
         const options = {
             method: 'GET',
             headers: {
-                'x-rapidapi-key': '0002ca57b1msh457ba5fb9a79692p1e9e98jsn814171ad4981',
+                'x-rapidapi-key': 'f4bee93bffmshcf82073558800dcp1ab469jsn8096c5aa782a',
                 'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
             }
         };
